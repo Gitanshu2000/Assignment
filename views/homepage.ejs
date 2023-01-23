@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Details</title>
+ <link rel="stylesheet" href="/css/homepage.css">
+</head>
+
+<body>
+
+  <form method="post" action="/homepage">
+    <label for="selectOption">Select your language</label>
+    <select name="select" id="selectOption">
+      <option value="english">English</option>
+      <option value="hindi">Hindi</option>
+      <option value="marathi">Marathi</option>
+      <option value="telugu">Telugu</option>
+      <option value="punjabi">Punjabi</option>
+
+    </select>
+    <input type="submit" value="Submit">
+  </form>
+
+  
+  <% if (data.length> 0 ) { %>
+    <h1 class="details">Here are details of Farmers in <%=lang %></h1>
+    <% for(var i=0; i < data.length; i++) { %>
+      <ul> <span>
+          <%= i+1 %>
+        </span>
+        <li> Name:<%= data[i].name %>
+        <li> Address: <%= data[i].address %>
+        <li>Age : <%= data[i].age %>
+        <li> Phone :<%= data[i].phone %>
+        <li>FarmerID : <%= data[i].fid %>
+            <br><br>
+      </ul>
+      <hr>
+      <% } %>
+        <% }  else if(text) { %>
+          <h2>
+            <%=text%>
+          </h2>
+          
+           <% } else { %>
+            <h1 class="dt">No Details available, Firstly add Details through csv</h1>
+            <% } %>
+</body>
+
+</html>

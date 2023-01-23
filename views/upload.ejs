@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Upload Farmers</title>
+ <link rel="stylesheet" href="/css/upload.css">
+</head>
+<body>
+    <center> <H1>Welcome <%=name%> <br>Upload Farmers Details</H1></center>
+    <form action="/upload" method="post" enctype="multipart/form-data" >
+        <input type="file" name="file" accept=".csv" required><br>
+        <!-- <span>only accept csv files</span> -->
+        <div style="color: red">
+          only accept csv files
+        </div>
+        <br> <br>
+        <button type="submit">Submit</button>
+      </form>
+      <form action="/homepage" method="get">
+
+        <button type="submit" >Click to Homepage</button>
+      </form>
+ 
+</body>

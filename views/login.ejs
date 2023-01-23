@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Login Page</title>
+    <link rel="stylesheet" href="/css/login.css">
+  </head>
+  <body>
+   <H1> <center>LOGIN PAGE</center></H1>
+    <form method="post" action="/login">
+      <label>UserID:</label>
+      <input type="text" name="uid" required />
+      <br />
+      <label>Password:</label>
+      <input type="password" name="password" required />
+      <br />
+      <% if(error){ %>
+        <div style="color: red";>
+          <%= error %>
+        </div>
+      <% } %>
+      <button type="submit">Login</button>
+      
+  </body>
+</html>
