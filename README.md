@@ -30,3 +30,7 @@ Note:Make sure you have a valid API key for the Google Translate API to use this
 Conclusion
 This application allows you to convert farmer details from English to different languages using the Google Translate API.
 . The application is designed to be easy to use and can be integrated into any existing system.
+
+
+For this i use html ,css, javascript , Nodejs , express, Cloud Translate API ,ejs and express library ( multer, ejs-engine,body-parser,static) and MYSQL Database.
+Thank you.
